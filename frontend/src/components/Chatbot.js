@@ -66,7 +66,7 @@ const Chatbot = () => {
 
   return (
     <>
-      <div className="fixed bottom-8 right-8 z-50">
+      <div className="fixed bottom-4 right-4 sm:right-8 z-50">
         <motion.button
           onClick={toggleChat}
           className="bg-indigo-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg"
@@ -91,7 +91,7 @@ const Chatbot = () => {
             initial={{ opacity: 0, y: 50, scale: 0.5 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.5 }}
-            className="fixed top-16 right-0 bottom-0 left-0 md:inset-auto md:bottom-28 md:right-8 w-full h-auto md:w-96 max-h-screen md:max-h-[80vh] bg-white rounded-none md:rounded-2xl shadow-xl flex flex-col overflow-hidden z-50"
+            className="fixed bottom-24 right-4 sm:right-8 w-[calc(100%-2rem)] sm:w-96 h-[60vh] sm:h-[70vh] max-h-[700px] bg-white rounded-2xl shadow-xl flex flex-col overflow-hidden z-50"
           >
             <div className="bg-indigo-600 text-white p-4 flex justify-between items-center">
               <h3 className="text-lg font-bold">Kyra - AI Assistant</h3>

@@ -1,0 +1,9 @@
+{
+  "name": "codigo-home",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite --host", "build": "vite build", "preview": "vite preview --host", "check": "tsc --noEmit" },
+  "dependencies": { "lucide-react": "latest", "react": "latest", "react-dom": "latest" },
+  "devDependencies": { "@tailwindcss/vite": "latest", "@types/react": "latest", "@types/react-dom": "latest", "@vitejs/plugin-react": "latest", "tailwindcss": "latest", "typescript": "latest", "vite": "latest" }
+}

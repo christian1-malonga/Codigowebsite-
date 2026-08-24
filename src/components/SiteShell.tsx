@@ -57,7 +57,7 @@ export function SiteHeader() {
   const isHome = window.location.pathname === '/';
   return <header className={`site-header ${isHome ? 'site-header--home' : ''} ${scrolled ? 'site-header--scrolled' : ''} ${orangeContext ? 'site-header--orange-context' : ''}`}>
     <div className="site-header__inner">
-      <a href="/" aria-label="Codigo homepage"><Brand light={orangeContext} /></a>
+      <a href="/" aria-label="Codigo homepage"><Brand light={!isHome && orangeContext} /></a>
       <nav className="site-nav" aria-label="Main navigation">
         {navigation.map(([label, href], index) => <a className="site-nav__link" style={{ '--nav-delay': `${index * 45}ms` } as CSSProperties} href={href} key={label}>{label}</a>)}
       </nav>

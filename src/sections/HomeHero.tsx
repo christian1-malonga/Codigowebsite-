@@ -16,11 +16,11 @@ const heroSlides: HeroSlide[] = [
     cta: { label: 'Our web products', href: '/#services' },
   },
   {
-    title: 'Powered by AI that adapts to every user',
+    title: 'We integrate AI into web and mobile products, giving them useful intelligence',
     cta: { label: 'AI at work', href: '/#services' },
   },
   {
-    title: 'Giving everyone new ways to create and move forward',
+    title: 'So everyone has new ways to create and move forward',
     cta: { label: 'Discover more', href: '/about' },
   },
 ];

@@ -1657,3 +1657,38 @@ img, svg { max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   .hero-section { background-image: url('/codigo-office-background-poster.jpg'); }
 }
+
+
+/* Homepage video direction: white editorial type, white top navigation, and a quiet media control. */
+.site-header--home:not(.site-header--scrolled) .brand-mark,
+.site-header--home:not(.site-header--scrolled) .site-nav__link,
+.site-header--home:not(.site-header--scrolled) .menu-toggle { color: #fff; }
+.site-header--home:not(.site-header--scrolled) .site-nav__link:hover { color: #fff; }
+.hero-section { background: #171514; }
+.hero-copy .eyebrow { color: rgba(255,255,255,.78); }
+.hero-copy h1 { color: #fff; text-shadow: 0 2px 24px rgba(0,0,0,.16); }
+.hero-copy p { color: rgba(255,255,255,.84); text-shadow: 0 1px 14px rgba(0,0,0,.2); }
+.hero-copy .pill-link { color: #fff; border-color: rgba(255,255,255,.45); background: rgba(13,11,9,.12); backdrop-filter: blur(10px); }
+.hero-copy .pill-link:hover { color: #fff; border-color: #fff; background: rgba(13,11,9,.2); }
+.hero-copy > .eyebrow,
+.hero-copy > h1,
+.hero-copy > p,
+.hero-copy > .hero-actions { opacity: 0; transform: translateY(22px); animation: hero-copy-reveal .8s cubic-bezier(.22,1,.36,1) forwards; }
+.hero-copy > .eyebrow { animation-delay: .12s; }
+.hero-copy > h1 { animation-delay: .2s; }
+.hero-copy > p { animation-delay: .32s; }
+.hero-copy > .hero-actions { animation-delay: .46s; }
+.hero-video-control { position: absolute; z-index: 4; right: 40px; bottom: 30px; display: inline-flex; align-items: center; gap: 9px; min-height: 42px; padding: 5px 13px 5px 6px; border: 1px solid rgba(255,255,255,.5); border-radius: 999px; color: #fff; background: rgba(13,11,9,.26); backdrop-filter: blur(12px); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .02em; text-transform: uppercase; transition: border-color .2s ease, background-color .2s ease, transform .2s ease; }
+.hero-video-control:hover { border-color: #fff; background: rgba(13,11,9,.42); transform: translateY(-2px); }
+.hero-video-control__icon { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; color: #171514; background: #fff; }
+@keyframes hero-copy-reveal { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 760px) {
+  .hero-video-control { right: 20px; bottom: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy > .eyebrow,
+  .hero-copy > h1,
+  .hero-copy > p,
+  .hero-copy > .hero-actions { opacity: 1; transform: none; animation: none; }
+  .hero-video-control { display: none; }
+}

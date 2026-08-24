@@ -1624,3 +1624,36 @@ img, svg { max-width: 100%; }
   .chatbot--blinking .chatbot-lid { animation: none; }
   .chatbot--blinking .chatbot-lid { opacity: 0; }
 }
+
+
+/* Homepage video atmosphere: the supplied office film lives only behind the home hero. */
+.hero-section { isolation: isolate; background: #11100f; }
+.hero-background-video,
+.hero-video-scrim { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.hero-background-video { z-index: -3; display: block; object-fit: cover; object-position: center center; filter: saturate(.82) contrast(.92) brightness(.78); }
+.hero-video-scrim { z-index: -2; background: linear-gradient(90deg, rgba(248,246,243,.96) 0%, rgba(248,246,243,.91) 34%, rgba(248,246,243,.66) 62%, rgba(13,11,9,.18) 100%), linear-gradient(180deg, rgba(248,246,243,.88) 0%, rgba(248,246,243,.05) 34%, rgba(13,11,9,.22) 100%); }
+.hero-section::after { z-index: -1; background: radial-gradient(circle, rgba(232,71,26,.16), rgba(232,71,26,.035) 43%, transparent 72%); mix-blend-mode: screen; }
+.hero-inner { z-index: 1; }
+@media (max-width: 760px) {
+  .hero-background-video { object-position: 58% center; filter: saturate(.78) contrast(.9) brightness(.7); }
+  .hero-video-scrim { background: linear-gradient(180deg, rgba(248,246,243,.96) 0%, rgba(248,246,243,.86) 43%, rgba(248,246,243,.28) 78%, rgba(13,11,9,.2) 100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-background-video { display: none; }
+  .hero-section { background-image: url('/codigo-office-background-poster.jpg'); background-position: center; background-size: cover; }
+}
+
+
+/* Refined hero balance: let the film read clearly while keeping the editorial copy calm and legible. */
+.hero-background-video { filter: saturate(.92) contrast(1.04) brightness(.82); object-position: center 48%; }
+.hero-video-scrim { background: linear-gradient(90deg, rgba(248,246,243,.88) 0%, rgba(248,246,243,.75) 28%, rgba(248,246,243,.38) 55%, rgba(13,11,9,.08) 100%), linear-gradient(180deg, rgba(248,246,243,.56) 0%, rgba(248,246,243,.03) 34%, rgba(13,11,9,.24) 100%); }
+.hero-copy h1 { text-wrap: balance; text-shadow: 0 1px 1px rgba(255,255,255,.2); }
+.hero-copy p { color: #4f4841; text-shadow: 0 1px 1px rgba(255,255,255,.16); }
+.hero-actions .pill-link { background: rgba(248,246,243,.28); backdrop-filter: blur(8px); }
+@media (max-width: 760px) {
+  .hero-background-video { filter: saturate(.88) contrast(1.02) brightness(.78); object-position: 60% center; }
+  .hero-video-scrim { background: linear-gradient(180deg, rgba(248,246,243,.93) 0%, rgba(248,246,243,.74) 44%, rgba(248,246,243,.2) 76%, rgba(13,11,9,.2) 100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-section { background-image: url('/codigo-office-background-poster.jpg'); }
+}

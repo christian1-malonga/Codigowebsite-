@@ -1692,3 +1692,18 @@ img, svg { max-width: 100%; }
   .hero-copy > .hero-actions { opacity: 1; transform: none; animation: none; }
   .hero-video-control { display: none; }
 }
+
+
+/* Final homepage media correction: crisp video with a white, black-type navbar. */
+.site-header--home:not(.site-header--scrolled) { background: #fff; box-shadow: 0 1px 0 rgba(13,11,9,.08); }
+.site-header--home:not(.site-header--scrolled) .brand-mark,
+.site-header--home:not(.site-header--scrolled) .site-nav__link,
+.site-header--home:not(.site-header--scrolled) .menu-toggle { color: #0d0b09; }
+.site-header--home:not(.site-header--scrolled) .site-nav__link:hover { color: #0d0b09; }
+.hero-background-video { filter: none; }
+.hero-video-scrim { backdrop-filter: none; }
+@media (max-width: 760px) {
+  .site-header--home:not(.site-header--scrolled) { background: #fff; }
+  .site-header--home:not(.site-header--scrolled) .brand-mark,
+  .site-header--home:not(.site-header--scrolled) .menu-toggle { color: #0d0b09; }
+}

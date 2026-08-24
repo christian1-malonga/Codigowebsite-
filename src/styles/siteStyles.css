@@ -1959,3 +1959,17 @@ html { scroll-behavior: auto; }
   .site-header .brand-mark { font-size: 17px; }
   .site-header--home .mobile-nav { top: 67px; }
 }
+
+/* Quiet Meta-like progress markers: small visual dots with generous invisible hit areas. */
+.hero-slide-nav { right: 30px; gap: 8px; }
+.hero-slide-dot { width: 20px; height: 20px; }
+.hero-slide-dot__circle { width: 4px; height: 4px; border-width: 1px; background: rgba(255,255,255,.12); }
+.hero-slide-dot:hover .hero-slide-dot__circle { width: 5px; height: 5px; background: rgba(255,255,255,.72); }
+.hero-slide-dot--active .hero-slide-dot__circle { width: 6px; height: 6px; box-shadow: 0 0 0 2px rgba(255,255,255,.14); }
+@media (max-width: 760px) {
+  .hero-slide-nav { right: 13px; gap: 6px; }
+  .hero-slide-dot { width: 18px; height: 18px; }
+  .hero-slide-dot__circle { width: 4px; height: 4px; }
+  .hero-slide-dot:hover .hero-slide-dot__circle { width: 5px; height: 5px; }
+  .hero-slide-dot--active .hero-slide-dot__circle { width: 6px; height: 6px; box-shadow: 0 0 0 2px rgba(255,255,255,.14); }
+}

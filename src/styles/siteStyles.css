@@ -1707,3 +1707,14 @@ img, svg { max-width: 100%; }
   .site-header--home:not(.site-header--scrolled) .brand-mark,
   .site-header--home:not(.site-header--scrolled) .menu-toggle { color: #0d0b09; }
 }
+
+
+/* Source-faithful media finish: preserve the HD film's color and detail. */
+.hero-background-video { filter: none; image-rendering: auto; }
+.hero-video-scrim { background: linear-gradient(90deg, rgba(7,10,18,.5) 0%, rgba(7,10,18,.28) 28%, rgba(7,10,18,.08) 58%, rgba(7,10,18,0) 100%), linear-gradient(180deg, rgba(7,10,18,.12) 0%, rgba(7,10,18,0) 48%, rgba(7,10,18,.18) 100%); }
+.hero-section::after { background: transparent; mix-blend-mode: normal; }
+.hero-copy h1 { text-shadow: 0 2px 20px rgba(0,0,0,.2); }
+.hero-copy p { text-shadow: 0 1px 12px rgba(0,0,0,.24); }
+@media (max-width: 760px) {
+  .hero-video-scrim { background: linear-gradient(180deg, rgba(7,10,18,.26) 0%, rgba(7,10,18,.12) 48%, rgba(7,10,18,.3) 100%); }
+}

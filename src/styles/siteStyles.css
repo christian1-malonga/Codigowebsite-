@@ -2191,3 +2191,40 @@ html { scroll-behavior: auto; }
   border-color: rgba(13,11,9,.3);
   background: rgba(13,11,9,.03);
 }
+
+
+/* Orange-surface header context: the navbar follows the section beneath it and switches to white type and branding. */
+.site-header.site-header--orange-context,
+.site-header--home.site-header--orange-context,
+.site-header--home.site-header--scrolled.site-header--orange-context {
+  background: #e8471a;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.site-header.site-header--orange-context .brand-mark,
+.site-header.site-header--orange-context .site-nav__link,
+.site-header.site-header--orange-context .menu-toggle,
+.site-header--home.site-header--orange-context .brand-mark,
+.site-header--home.site-header--orange-context .site-nav__link,
+.site-header--home.site-header--orange-context .menu-toggle {
+  color: #fff;
+}
+.site-header.site-header--orange-context .site-nav__link:hover,
+.site-header--home.site-header--orange-context .site-nav__link:hover {
+  color: #fff;
+}
+.site-header.site-header--orange-context .orange-button,
+.site-header--home.site-header--orange-context .orange-button {
+  color: #e8471a;
+  background: #fff;
+}
+.site-header.site-header--orange-context .orange-button:hover,
+.site-header--home.site-header--orange-context .orange-button:hover {
+  color: #e8471a;
+  background: #fff;
+}
+.site-header.site-header--orange-context .orange-button .button-arrow,
+.site-header--home.site-header--orange-context .orange-button .button-arrow {
+  color: #fff;
+  background: #e8471a;
+}

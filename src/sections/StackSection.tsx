@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { stackCategories } from '../data/siteContent';
+
 import { SectionHeading, SectionWrap } from '../components/SectionComponents';
 import { StackIcon } from '../components/IconLibrary';
 

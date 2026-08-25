@@ -1,4 +1,5 @@
 import { OrangeButton } from '../components/SiteShell';
+
 import { SectionWrap } from '../components/SectionComponents';
 
 const joinCards = [['01 // INTERNAL', 'Core Team Member', 'Help shape our studio culture and long-term product direction'], ['02 // EXTERNAL', 'Client Project Placement', 'Join leading international teams on meaningful, high-impact initiatives'], ['03 // FLEX', 'Remote / Hybrid', 'Work from wherever you are, aligned with core client time zones']] as const;

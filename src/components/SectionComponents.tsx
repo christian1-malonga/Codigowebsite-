@@ -10,6 +10,7 @@ export function SectionHeading({ title, italic, intro, dark = false }: { title: 
 }
 export function Tags({ items, active = false }: { items: readonly string[]; active?: boolean }) { return <div className="tags">{items.map(item => <span className={`tag ${active ? 'tag--active' : ''}`} key={item}>{item}</span>)}</div>; }
 export function SectionWrap({ children, className = '', tone = 'paper', watermark, dark = false, id, reveal = true }: { children: ReactNode; className?: string; tone?: 'paper' | 'soft' | 'orange'; watermark?: ReactNode; dark?: boolean; id?: string; reveal?: boolean }) {
+
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(!reveal);
   useEffect(() => {
@@ -23,6 +24,7 @@ export function SectionWrap({ children, className = '', tone = 'paper', watermar
     return () => observer.disconnect();
   }, [reveal]);
   return <section ref={sectionRef} id={id} className={`page-section page-section--${tone} ${dark ? 'page-section--dark' : ''} ${reveal ? `reveal-section ${isVisible ? 'reveal-section--visible' : ''}` : ''} ${className}`}>{tone !== 'orange' && <Grain />}{watermark && <Watermark className={tone === 'orange' ? 'watermark--light' : ''}>{watermark}</Watermark>}<div className="section-inner">{children}</div></section>;
+
 }
 export function ServiceIcon({ name }: { name: string }) { return <div className="service-icon"><LineIcon name={name} size={40} /></div>; }
 export function ArrowLink({ children, href = '#' }: { children: ReactNode; href?: string }) { return <a className="arrow-link" href={href}>{children}<ArrowUpRight size={15} /></a>; }
